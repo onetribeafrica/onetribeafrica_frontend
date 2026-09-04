@@ -1,4 +1,4 @@
-import { sendNotificationEmail, jsonResponse, type EmailEnv } from './_email';
+import { sendNotificationEmail, jsonResponse, type EmailEnv } from './email';
 
 interface VolunteerPayload {
   name: string;
@@ -9,7 +9,7 @@ interface VolunteerPayload {
   company?: string; // honeypot
 }
 
-export const onRequestPost: PagesFunction<EmailEnv> = async ({ request, env }) => {
+export async function handleVolunteer(request: Request, env: EmailEnv): Promise<Response> {
   let data: VolunteerPayload;
   try {
     data = await request.json();
@@ -33,9 +33,9 @@ export const onRequestPost: PagesFunction<EmailEnv> = async ({ request, env }) =
       ['Availability', data.availability || 'Not specified'],
       ['Message', data.message || ''],
     ]);
-  } catch (err) {
+  } catch {
     return jsonResponse({ ok: false, error: 'Failed to submit application' }, 502);
   }
 
   return jsonResponse({ ok: true });
-};
+}

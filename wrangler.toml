@@ -1,3 +1,8 @@
-name = "onetribeafrica"
-pages_build_output_dir = "out"
+name = "onetribeafrica-frontend"
+main = "worker/index.ts"
 compatibility_date = "2025-01-01"
+
+[assets]
+directory = "out"
+binding = "ASSETS"
+not_found_handling = "404-page"

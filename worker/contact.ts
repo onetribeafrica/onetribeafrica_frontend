@@ -1,4 +1,4 @@
-import { sendNotificationEmail, jsonResponse, type EmailEnv } from './_email';
+import { sendNotificationEmail, jsonResponse, type EmailEnv } from './email';
 
 interface ContactPayload {
   name: string;
@@ -8,7 +8,7 @@ interface ContactPayload {
   company?: string; // honeypot
 }
 
-export const onRequestPost: PagesFunction<EmailEnv> = async ({ request, env }) => {
+export async function handleContact(request: Request, env: EmailEnv): Promise<Response> {
   let data: ContactPayload;
   try {
     data = await request.json();
@@ -32,9 +32,9 @@ export const onRequestPost: PagesFunction<EmailEnv> = async ({ request, env }) =
       ['Reason', data.reason || 'General Inquiry'],
       ['Message', data.message],
     ]);
-  } catch (err) {
+  } catch {
     return jsonResponse({ ok: false, error: 'Failed to send message' }, 502);
   }
 
   return jsonResponse({ ok: true });
-};
+}
