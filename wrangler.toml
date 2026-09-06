@@ -6,3 +6,7 @@ compatibility_date = "2025-01-01"
 directory = "out"
 binding = "ASSETS"
 not_found_handling = "404-page"
+
+[[routes]]
+pattern = "onetribeafrica.org"
+custom_domain = true
