@@ -20,7 +20,7 @@ const programs: Program[] = [
 {
   name: 'Vocational Bootcamp',
   region: 'East & West Africa',
-  description: 'A 12-week intensive program covering digital skills, construction trades, and sustainable agriculture for ages 18–35.',
+  description: 'A 12-week intensive program covering digital skills, construction trades, and sustainable agriculture for ages 18 to 35.',
   image: "https://img.rocket.new/generatedImages/rocket_gen_img_10521239b-1780412036199.png",
   alt: 'Young men in a vocational training session, workshop interior, dim lighting, focused on tasks',
   stat: '8,200+',
@@ -40,7 +40,7 @@ const programs: Program[] = [
 {
   name: 'Small Business Seed Fund',
   region: 'Pan-African',
-  description: 'Micro-grants of $250–$2,000 paired with 6 months of business mentorship for first-time entrepreneurs.',
+  description: 'Micro-grants of $250 to $2,000 paired with 6 months of business mentorship for first-time entrepreneurs.',
   image: "https://img.rocket.new/generatedImages/rocket_gen_img_1b6479033-1772296923579.png",
   alt: 'African woman at market stall with products displayed, outdoor bright market setting, confident posture',
   stat: '1,400+',

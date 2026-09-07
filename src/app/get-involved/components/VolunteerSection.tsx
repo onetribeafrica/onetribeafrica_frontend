@@ -22,10 +22,10 @@ const steps = [
 ];
 
 const roles = [
-  { title: 'Health Educator', region: 'Kenya, Uganda, Tanzania', commitment: '3–6 months', skills: 'Healthcare, Teaching' },
+  { title: 'Health Educator', region: 'Kenya, Uganda, Tanzania', commitment: '3 to 6 months', skills: 'Healthcare, Teaching' },
   { title: 'Vocational Trainer', region: 'Nigeria, Ghana, Senegal', commitment: '3 months', skills: 'Trade skills, Facilitation' },
-  { title: 'Business Mentor', region: 'South Africa, Ethiopia', commitment: '3–12 months', skills: 'Business, Finance' },
-  { title: 'Field Coordinator', region: 'Pan-African', commitment: '6–12 months', skills: 'Project Management' },
+  { title: 'Business Mentor', region: 'South Africa, Ethiopia', commitment: '3 to 12 months', skills: 'Business, Finance' },
+  { title: 'Field Coordinator', region: 'Pan-African', commitment: '6 to 12 months', skills: 'Project Management' },
 ];
 
 export default function VolunteerSection() {
@@ -103,7 +103,7 @@ export default function VolunteerSection() {
           </p>
         </div>
 
-        {/* How It Works — 3 steps, asymmetric layout (NOT numbered timeline) */}
+        {/* How It Works: 3 steps, asymmetric layout (NOT numbered timeline) */}
         <div className="grid md:grid-cols-3 gap-6 mb-20">
           {steps.map((step, i) => (
             <div
@@ -171,7 +171,7 @@ export default function VolunteerSection() {
               <p className="text-5xl mb-4">🌍</p>
               <h4 className="text-2xl font-bold text-primary-foreground mb-3">Application Received!</h4>
               <p className="text-primary-foreground/70 font-serif">
-                Thank you for stepping up. Our Field Team Lead will be in touch within 3–5 business days.
+                Thank you for stepping up. Our Field Team Lead will be in touch within 3 to 5 business days.
               </p>
             </div>
           ) : (

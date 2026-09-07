@@ -14,7 +14,7 @@ interface Story {
 
 const stories: Story[] = [
 {
-  quote: 'Before the vocational bootcamp, I had no way to earn a consistent income. Three months later, I had my own tailoring shop and two apprentices working under me. OneTribe did not give me charity — they gave me capability.',
+  quote: 'Before the vocational bootcamp, I had no way to earn a consistent income. Three months later, I had my own tailoring shop and two apprentices working under me. OneTribe did not give me charity. They gave me capability.',
   name: 'Amara Diallo',
   location: 'Dakar, Senegal',
   program: 'Vocational Bootcamp, 2024',
@@ -38,7 +38,7 @@ const stories: Story[] = [
   alt: 'Fatuma Wanjiku, healthcare worker in uniform, outdoor community setting, warm afternoon light'
 },
 {
-  quote: 'My village had no access to clean water or health education. The OneTribe field team spent six weeks with us — not just building, but teaching. Two years on, we run the program ourselves. That is true local ownership.',
+  quote: 'My village had no access to clean water or health education. The OneTribe field team spent six weeks with us, not just building but teaching. Two years on, we run the program ourselves. That is true local ownership.',
   name: 'Kwesi Mensah',
   location: 'Tamale, Ghana',
   program: 'Community Development, 2022',

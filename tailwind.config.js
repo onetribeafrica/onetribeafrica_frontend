@@ -12,33 +12,33 @@ module.exports = {
     },
     extend: {
       colors: {
-        background: 'var(--background)',
-        foreground: 'var(--foreground)',
+        background: 'rgb(var(--background-rgb) / <alpha-value>)',
+        foreground: 'rgb(var(--foreground-rgb) / <alpha-value>)',
         primary: {
-          DEFAULT: 'var(--primary)',
-          foreground: 'var(--primary-foreground)',
+          DEFAULT: 'rgb(var(--primary-rgb) / <alpha-value>)',
+          foreground: 'rgb(var(--primary-foreground-rgb) / <alpha-value>)',
         },
         accent: {
-          DEFAULT: 'var(--accent)',
-          foreground: 'var(--accent-foreground)',
+          DEFAULT: 'rgb(var(--accent-rgb) / <alpha-value>)',
+          foreground: 'rgb(var(--accent-foreground-rgb) / <alpha-value>)',
         },
         secondary: {
-          DEFAULT: 'var(--secondary)',
-          foreground: 'var(--secondary-foreground)',
+          DEFAULT: 'rgb(var(--secondary-rgb) / <alpha-value>)',
+          foreground: 'rgb(var(--secondary-foreground-rgb) / <alpha-value>)',
         },
         palm: {
-          DEFAULT: 'var(--palm)',
-          foreground: 'var(--palm-foreground)',
+          DEFAULT: 'rgb(var(--palm-rgb) / <alpha-value>)',
+          foreground: 'rgb(var(--palm-foreground-rgb) / <alpha-value>)',
         },
         muted: {
-          DEFAULT: 'var(--muted)',
-          foreground: 'var(--muted-foreground)',
+          DEFAULT: 'rgb(var(--muted-rgb) / <alpha-value>)',
+          foreground: 'rgb(var(--muted-foreground-rgb) / <alpha-value>)',
         },
         card: {
-          DEFAULT: 'var(--card)',
-          foreground: 'var(--card-foreground)',
+          DEFAULT: 'rgb(var(--card-rgb) / <alpha-value>)',
+          foreground: 'rgb(var(--card-foreground-rgb) / <alpha-value>)',
         },
-        border: 'var(--border)',
+        border: 'rgb(var(--border-rgb) / <alpha-value>)',
         input: 'var(--input)',
         ring: 'var(--ring)',
       },
@@ -53,9 +53,9 @@ module.exports = {
         '4xl': 'calc(var(--radius) + 32px)',
       },
       fontFamily: {
-        sans: ['var(--font-bricolage)', 'sans-serif'],
-        serif: ['var(--font-fraunces)', 'serif'],
-        mono: ['var(--font-jetbrains)', 'monospace'],
+        sans: ['var(--font-montserrat)', 'sans-serif'],
+        serif: ['var(--font-montserrat)', 'sans-serif'],
+        mono: ['var(--font-montserrat)', 'sans-serif'],
       },
       transitionTimingFunction: {
         'expo-out': 'cubic-bezier(0.16, 1, 0.3, 1)',

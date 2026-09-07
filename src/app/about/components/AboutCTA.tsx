@@ -42,7 +42,7 @@ export default function AboutCTA() {
             <span className="font-serif italic text-secondary"> Tribe.</span>
           </h2>
           <p className="text-muted-foreground text-xl font-serif leading-relaxed mb-10 max-w-2xl mx-auto">
-            Whether you want to volunteer in the field, fund a program, or partner with us institutionally — there is a place for you in OneTribe Africa.
+            Whether you want to volunteer in the field, fund a program, or partner with us institutionally, there is a place for you in OneTribe Africa.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

@@ -89,7 +89,7 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 focus-ring rounded-lg" aria-label="OneTribe Africa Home">
-            <AppLogo size={36} className="brightness-0 invert" />
+            <AppLogo size={36} />
             <span className="font-sans font-800 text-primary-foreground text-xl tracking-tight hidden sm:block">
               OneTribe<span className="text-accent">Africa</span>
             </span>
@@ -115,7 +115,7 @@ export default function Header() {
                 {item.children && activeMenu === item.label && (
                   <div
                     className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 rounded-2xl overflow-hidden shadow-2xl shadow-primary/30 border border-primary-foreground/10"
-                    style={{ background: 'rgba(30,43,79,0.97)', backdropFilter: 'blur(16px)' }}
+                    style={{ background: 'rgba(10,71,80,0.97)', backdropFilter: 'blur(16px)' }}
                     onMouseEnter={() => handleMenuEnter(item.label)}
                     onMouseLeave={handleMenuLeave}
                   >
@@ -182,7 +182,7 @@ export default function Header() {
       {mobileOpen && (
         <div
           className="fixed inset-0 z-40 lg:hidden"
-          style={{ background: 'rgba(30,43,79,0.98)', backdropFilter: 'blur(16px)' }}
+          style={{ background: 'rgba(10,71,80,0.98)', backdropFilter: 'blur(16px)' }}
           onClick={(e) => {
             if (e.target === e.currentTarget) setMobileOpen(false);
           }}
@@ -265,7 +265,7 @@ function ScrollProgressBar() {
       <div
         className="h-full origin-left"
         style={{
-          background: 'linear-gradient(90deg, #E8A33D, #C1512F)',
+          background: 'linear-gradient(90deg, #DE4A1E, #E8A33D)',
           transform: `scaleX(${progress})`,
           transition: 'transform 0.1s linear',
         }}

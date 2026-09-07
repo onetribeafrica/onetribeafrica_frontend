@@ -4,26 +4,45 @@
 
 :root {
   --background: #F6F1E7;
-  --foreground: #17140F;
-  --primary: #1E2B4F;
-  --primary-foreground: #F6F1E7;
-  --accent: #E8A33D;
-  --accent-foreground: #17140F;
-  --secondary: #C1512F;
-  --secondary-foreground: #F6F1E7;
-  --palm: #20493D;
-  --palm-foreground: #F6F1E7;
+  --foreground: #15130E;
+  --primary: #0A4750;
+  --primary-foreground: #F7F3EA;
+  --accent: #DE4A1E;
+  --accent-foreground: #FFFFFF;
+  --secondary: #E8A33D;
+  --secondary-foreground: #15130E;
+  --palm: #163F35;
+  --palm-foreground: #F7F3EA;
   --muted: #6B6355;
-  --muted-foreground: #8B7D6B;
+  --muted-foreground: #5C5346;
   --card: #FFFFFF;
-  --card-foreground: #17140F;
+  --card-foreground: #15130E;
   --border: #E2D9C8;
   --input: #EDE8DC;
-  --ring: #E8A33D;
+  --ring: #DE4A1E;
   --radius: 0.75rem;
-  --font-sans: 'Bricolage Grotesque', sans-serif;
-  --font-serif: 'Fraunces', serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  --font-sans: 'Montserrat', sans-serif;
+  --font-serif: 'Montserrat', sans-serif;
+  --font-mono: 'Montserrat', sans-serif;
+
+  /* RGB channel values (no rgb() wrapper) so Tailwind's color-opacity
+     modifiers (e.g. text-primary-foreground/70) resolve correctly —
+     Tailwind can't extract channels out of a var() holding a hex string. */
+  --background-rgb: 246 241 231;
+  --foreground-rgb: 21 19 14;
+  --primary-rgb: 10 71 80;
+  --primary-foreground-rgb: 247 243 234;
+  --accent-rgb: 222 74 30;
+  --accent-foreground-rgb: 255 255 255;
+  --secondary-rgb: 232 163 61;
+  --secondary-foreground-rgb: 21 19 14;
+  --palm-rgb: 22 63 53;
+  --palm-foreground-rgb: 247 243 234;
+  --muted-rgb: 107 99 85;
+  --muted-foreground-rgb: 92 83 70;
+  --card-rgb: 255 255 255;
+  --card-foreground-rgb: 21 19 14;
+  --border-rgb: 226 217 200;
 }
 
 @layer base {
@@ -47,6 +66,11 @@
 
   h1, h2, h3, h4, h5, h6, p {
     margin: 0;
+  }
+
+  p {
+    text-align: justify;
+    text-justify: inter-word;
   }
 }
 
@@ -89,11 +113,11 @@
     background: rgba(246, 241, 231, 0.75);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(30, 43, 79, 0.08);
+    border: 1px solid rgba(10, 71, 80, 0.08);
   }
 
   .glass-dark {
-    background: rgba(30, 43, 79, 0.7);
+    background: rgba(10, 71, 80, 0.7);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(246, 241, 231, 0.1);
@@ -132,12 +156,12 @@
 
   .card-hover:hover {
     transform: translateY(-6px);
-    box-shadow: 0 24px 60px rgba(30, 43, 79, 0.15);
+    box-shadow: 0 24px 60px rgba(10, 71, 80, 0.15);
   }
 
   .btn-primary {
     background-color: var(--accent);
-    color: var(--foreground);
+    color: var(--accent-foreground);
     font-family: var(--font-sans);
     font-weight: 700;
     letter-spacing: 0.02em;
@@ -145,9 +169,9 @@
   }
 
   .btn-primary:hover {
-    background-color: #d4922e;
+    background-color: #B93B15;
     transform: translateY(-2px);
-    box-shadow: 0 12px 32px rgba(232, 163, 61, 0.35);
+    box-shadow: 0 12px 32px rgba(222, 74, 30, 0.35);
   }
 
   .btn-outline {
@@ -167,25 +191,25 @@
   }
 
   .blob-gold {
-    background: radial-gradient(circle, rgba(232, 163, 61, 0.18) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(222, 74, 30, 0.18) 0%, transparent 70%);
     filter: blur(60px);
     border-radius: 50%;
   }
 
   .blob-terracotta {
-    background: radial-gradient(circle, rgba(193, 81, 47, 0.12) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(232, 163, 61, 0.14) 0%, transparent 70%);
     filter: blur(80px);
     border-radius: 50%;
   }
 
   .blob-palm {
-    background: radial-gradient(circle, rgba(32, 73, 61, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(22, 63, 53, 0.15) 0%, transparent 70%);
     filter: blur(70px);
     border-radius: 50%;
   }
 
   .gradient-text-gold {
-    background: linear-gradient(135deg, #E8A33D 0%, #C1512F 100%);
+    background: linear-gradient(135deg, #DE4A1E 0%, #E8A33D 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

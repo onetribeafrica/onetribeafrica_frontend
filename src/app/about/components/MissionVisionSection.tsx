@@ -42,10 +42,10 @@ export default function MissionVisionSection() {
           >
             <p className="eyebrow text-secondary mb-4">Our Mission</p>
             <h2 className="text-3xl font-bold text-foreground mb-6 leading-tight">
-              To empower African communities through locally-owned development programs that build lasting capability.
+              Equipping communities with the tools, training, and trust to lead their own development.
             </h2>
             <p className="text-muted-foreground text-base leading-relaxed font-serif">
-              We design, fund, and deliver programs in vocational skills, community health, and small business development — always with community leaders as equal partners in every decision. We measure success not by programs delivered, but by programs sustained independently.
+              We design, fund, and deliver programs in vocational skills, community health, and small business development, always alongside community leaders as equal partners in every decision. We measure success not by programs delivered, but by programs sustained independently.
             </p>
           </div>
 
@@ -62,10 +62,10 @@ export default function MissionVisionSection() {
           >
             <p className="eyebrow text-accent mb-4">Our Vision</p>
             <h2 className="text-3xl font-bold text-primary-foreground mb-6 leading-tight">
-              An Africa where every community has the resources, skills, and leadership to determine its own future.
+              Educating communities to overcome social injustice across the African continent.
             </h2>
             <p className="text-primary-foreground/65 text-base leading-relaxed font-serif">
-              We envision a continent where the cycle of dependency is broken — where local leaders run world-class programs, where young people have real economic pathways, and where the narrative about Africa is written by Africans. OneTribe is one step toward that future.
+              We envision a continent where knowledge breaks the cycle of dependency: where local leaders run world-class programs, where young people have real economic pathways, and where the story of Africa is written by Africans. OneTribe is one step toward that future.
             </p>
           </div>
         </div>

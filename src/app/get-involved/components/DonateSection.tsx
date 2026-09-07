@@ -38,7 +38,7 @@ const oneTimeTiers: DonationTier[] = [
     amount: '$50',
     label: 'Starter Gift',
     description: 'One-time',
-    impact: 'Seeds a micro-enterprise starter kit — tools, materials, and first-month inventory.',
+    impact: 'Seeds a micro-enterprise starter kit: tools, materials, and first-month inventory.',
   },
   {
     amount: '$250',

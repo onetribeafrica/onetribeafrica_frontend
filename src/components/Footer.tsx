@@ -17,7 +17,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed font-serif">
-              Uniting communities. Elevating lives. Building a stronger Africa — together.
+              Uniting communities, elevating lives, and building a stronger Africa together.
             </p>
             <div className="flex items-center gap-3 pt-1">
               {[

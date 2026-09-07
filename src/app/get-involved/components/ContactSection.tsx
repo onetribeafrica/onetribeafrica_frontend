@@ -125,7 +125,7 @@ export default function ContactSection() {
                   }}
                 >
                   <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
-                    style={{ background: 'rgba(232,163,61,0.1)' }}>
+                    style={{ background: 'rgba(222,74,30,0.1)' }}>
                     <Icon
                       name={card.icon as Parameters<typeof Icon>[0]['name']}
                       size={20}
@@ -154,7 +154,7 @@ export default function ContactSection() {
             >
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5"
-                  style={{ background: 'rgba(32,73,61,0.1)' }}>
+                  style={{ background: 'rgba(22,63,53,0.1)' }}>
                   <Icon name="MapPinIcon" size={20} className="text-palm" />
                 </div>
                 <div>

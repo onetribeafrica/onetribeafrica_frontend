@@ -107,7 +107,7 @@ export default function HeroSection() {
             ctx.beginPath();
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.lineTo(nodes[j].x, nodes[j].y);
-            ctx.strokeStyle = `rgba(232, 163, 61, ${alpha})`;
+            ctx.strokeStyle = `rgba(222, 74, 30, ${alpha})`;
             ctx.lineWidth = 1;
             ctx.stroke();
           }
@@ -119,7 +119,7 @@ export default function HeroSection() {
         const pulse = Math.sin(t + node.pulseOffset) * 0.3 + 0.7;
         ctx.beginPath();
         ctx.arc(node.x, node.y, node.r * pulse, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(232, 163, 61, ${node.opacity * pulse})`;
+        ctx.fillStyle = `rgba(222, 74, 30, ${node.opacity * pulse})`;
         ctx.fill();
 
         // Move
@@ -256,7 +256,7 @@ export default function HeroSection() {
           </h1>
 
           {/* Subhead */}
-          <p className="text-primary-foreground/75 text-lg md:text-xl max-w-xl mb-10 leading-relaxed font-serif">
+          <p className="text-primary-foreground/75 text-lg md:text-xl max-w-xl mb-10 leading-relaxed font-serif text-left">
             {slide.subhead}
           </p>
 

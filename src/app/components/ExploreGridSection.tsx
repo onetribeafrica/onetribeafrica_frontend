@@ -96,7 +96,7 @@ export default function ExploreGridSection() {
             </h2>
           </div>
           <p className="text-muted-foreground max-w-sm text-base leading-relaxed">
-            Four pillars of change — each designed to create lasting, locally-owned transformation.
+            Four pillars of change, each designed to create lasting, locally-owned transformation.
           </p>
         </div>
 

@@ -23,28 +23,28 @@ const values: Value[] = [
     description: 'Every person we work with is a capable partner and a full human being. We communicate and design with that dignity at the center of everything.',
     icon: 'HeartIcon',
     color: 'var(--secondary)',
-    bg: 'rgba(193, 81, 47, 0.08)',
+    bg: 'rgba(232, 163, 61, 0.1)',
   },
   {
     title: 'Local Ownership',
     description: 'Programs that cannot be run independently within three years are programs we have not done well enough. Community ownership is the goal, not the bonus.',
     icon: 'HomeIcon',
     color: 'var(--palm)',
-    bg: 'rgba(32, 73, 61, 0.08)',
+    bg: 'rgba(22, 63, 53, 0.08)',
   },
   {
     title: 'Radical Transparency',
     description: 'We publish our program results, our finances, and our failures. Trust is built through honesty, not polished reports.',
     icon: 'EyeIcon',
     color: 'var(--accent)',
-    bg: 'rgba(232, 163, 61, 0.08)',
+    bg: 'rgba(222, 74, 30, 0.08)',
   },
   {
     title: 'Long-Term Partnership',
     description: 'We do not parachute in for a week and leave. Our shortest program commitment is 18 months. Real change takes time and presence.',
     icon: 'HandshakeIcon',
     color: 'var(--primary)',
-    bg: 'rgba(30, 43, 79, 0.08)',
+    bg: 'rgba(10, 71, 80, 0.08)',
   },
 ];
 

@@ -62,7 +62,7 @@ export default function GetInvolvedCTA() {
               <p className="eyebrow text-accent mb-3">For Individuals</p>
               <h3 className="text-3xl font-bold text-white mb-4">Volunteer With Us</h3>
               <p className="text-white/70 text-base font-serif leading-relaxed mb-8 max-w-sm">
-                Join our field teams across 14 countries. Bring your skills — training, health, engineering, education — and help communities lead their own transformation.
+                Join our field teams across 14 countries. Bring your skills in training, health, engineering, or education, and help communities lead their own transformation.
               </p>
               <Link
                 href="/get-involved#volunteer"
