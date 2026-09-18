@@ -181,11 +181,10 @@ export default function ContactSection() {
               <p className="eyebrow text-muted-foreground mb-4">Follow Our Work</p>
               <div className="flex gap-3">
                 {[
-                  { label: 'Instagram', icon: 'PhotoIcon' },
-                  { label: 'Twitter / X', icon: 'ChatBubbleLeftRightIcon' },
                   { label: 'Facebook', icon: 'GlobeAltIcon' },
+                  { label: 'Instagram', icon: 'PhotoIcon' },
                   { label: 'LinkedIn', icon: 'BriefcaseIcon' },
-                  { label: 'YouTube', icon: 'PlayIcon' },
+                  { label: 'X', icon: 'ChatBubbleLeftRightIcon' },
                 ].map((s) => (
                   <a
                     key={s.label}

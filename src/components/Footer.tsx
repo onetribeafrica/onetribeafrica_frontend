@@ -11,7 +11,7 @@ export default function Footer() {
           {/* Left: Logo + tagline */}
           <div className="flex flex-col gap-4 max-w-xs">
             <Link href="/" className="flex items-center gap-3 focus-ring rounded-lg">
-              <AppLogo size={36} />
+              <AppLogo size={72} />
               <span className="font-sans font-bold text-primary text-xl tracking-tight">
                 OneTribe<span className="text-secondary">Africa</span>
               </span>
@@ -21,10 +21,10 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-3 pt-1">
               {[
-                { icon: 'GlobeAltIcon', href: '#', label: 'Website' },
-                { icon: 'ChatBubbleLeftRightIcon', href: '#', label: 'Twitter' },
+                { icon: 'GlobeAltIcon', href: '#', label: 'Facebook' },
                 { icon: 'PhotoIcon', href: '#', label: 'Instagram' },
-                { icon: 'PlayIcon', href: '#', label: 'YouTube' },
+                { icon: 'BriefcaseIcon', href: '#', label: 'LinkedIn' },
+                { icon: 'ChatBubbleLeftRightIcon', href: '#', label: 'X' },
               ].map((s) => (
                 <a
                   key={s.label}
@@ -65,7 +65,7 @@ export default function Footer() {
               <div className="space-y-3">
                 {[
                   { label: 'What We Do', href: '/#programs' },
-                  { label: 'Apply for Programs', href: '/#programs' },
+                  { label: 'Apply for Programs', href: '/#projects' },
                   { label: 'Current Projects', href: '/#projects' },
                   { label: 'Our Impact', href: '/#impact' },
                 ].map((l) => (
@@ -86,7 +86,7 @@ export default function Footer() {
                 {[
                   { label: 'Volunteer', href: '/get-involved#volunteer' },
                   { label: 'Donate', href: '/get-involved#donate' },
-                  { label: 'Partner With Us', href: '/get-involved#partner' },
+                  { label: 'Partner With Us', href: '/get-involved#contact' },
                   { label: 'Contact Us', href: '/get-involved#contact' },
                 ].map((l) => (
                   <Link

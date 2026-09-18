@@ -36,7 +36,7 @@ const navItems: NavItem[] = [
     children: [
       { label: 'Volunteer', href: '/get-involved#volunteer', desc: 'Join our field teams' },
       { label: 'Donate', href: '/get-involved#donate', desc: 'Fund programs directly' },
-      { label: 'Partner With Us', href: '/get-involved#partner', desc: 'Institutional partnerships' },
+      { label: 'Partner With Us', href: '/get-involved#contact', desc: 'Institutional partnerships' },
       { label: 'Contact', href: '/get-involved#contact', desc: 'Get in touch with us' },
     ],
   },
@@ -89,7 +89,7 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 focus-ring rounded-lg" aria-label="OneTribe Africa Home">
-            <AppLogo size={36} />
+            <AppLogo size={84} />
             <span className="font-sans font-800 text-primary-foreground text-xl tracking-tight hidden sm:block">
               OneTribe<span className="text-accent">Africa</span>
             </span>
