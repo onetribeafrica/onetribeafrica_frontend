@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
-import Link from 'next/link';
+import Link from '@/components/ui/SectionLink';
 import AppImage from '@/components/ui/AppImage';
 
 export default function GetInvolvedCTA() {

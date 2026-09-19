@@ -186,14 +186,14 @@ export default function ContactSection() {
                   { label: 'LinkedIn', icon: 'BriefcaseIcon' },
                   { label: 'X', icon: 'ChatBubbleLeftRightIcon' },
                 ].map((s) => (
-                  <a
+                  <button
                     key={s.label}
-                    href="#"
+                    type="button"
                     aria-label={s.label}
                     className="w-11 h-11 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-accent hover:border-accent transition-colors focus-ring"
                   >
                     <Icon name={s.icon as Parameters<typeof Icon>[0]['name']} size={18} />
-                  </a>
+                  </button>
                 ))}
               </div>
             </div>

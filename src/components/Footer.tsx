@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import Link from '@/components/ui/SectionLink';
 import AppLogo from '@/components/ui/AppLogo';
 import Icon from '@/components/ui/AppIcon';
 
@@ -21,19 +21,19 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-3 pt-1">
               {[
-                { icon: 'GlobeAltIcon', href: '#', label: 'Facebook' },
-                { icon: 'PhotoIcon', href: '#', label: 'Instagram' },
-                { icon: 'BriefcaseIcon', href: '#', label: 'LinkedIn' },
-                { icon: 'ChatBubbleLeftRightIcon', href: '#', label: 'X' },
+                { icon: 'GlobeAltIcon', label: 'Facebook' },
+                { icon: 'PhotoIcon', label: 'Instagram' },
+                { icon: 'BriefcaseIcon', label: 'LinkedIn' },
+                { icon: 'ChatBubbleLeftRightIcon', label: 'X' },
               ].map((s) => (
-                <a
+                <button
                   key={s.label}
-                  href={s.href}
+                  type="button"
                   aria-label={s.label}
                   className="w-9 h-9 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors focus-ring"
                 >
                   <Icon name={s.icon as Parameters<typeof Icon>[0]['name']} size={16} />
-                </a>
+                </button>
               ))}
             </div>
           </div>
@@ -108,12 +108,12 @@ export default function Footer() {
             © 2026 OneTribe Africa. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors focus-ring rounded">
+            <button type="button" className="text-sm text-muted-foreground hover:text-foreground transition-colors focus-ring rounded">
               Privacy Policy
-            </Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors focus-ring rounded">
+            </button>
+            <button type="button" className="text-sm text-muted-foreground hover:text-foreground transition-colors focus-ring rounded">
               Terms of Service
-            </Link>
+            </button>
           </div>
         </div>
       </div>
