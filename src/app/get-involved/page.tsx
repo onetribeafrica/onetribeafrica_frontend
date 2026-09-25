@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 
 export default function GetInvolvedPage() {
   return (
-    <main className="min-h-screen bg-background">
+    <main id="main" tabIndex={-1} className="min-h-screen bg-background outline-none">
       <Header />
       <GetInvolvedHero />
       <VolunteerSection />

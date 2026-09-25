@@ -2,6 +2,7 @@ import React from 'react';
 import type { Metadata, Viewport } from 'next';
 import { Montserrat } from 'next/font/google';
 import ScrollRestorer from '@/components/ui/ScrollRestorer';
+import SkipLink from '@/components/ui/SkipLink';
 import '../styles/tailwind.css';
 
 const montserrat = Montserrat({
@@ -74,12 +75,6 @@ const organizationJsonLd = {
     'OneTribe Africa educates communities to overcome social injustice across Africa through skills training, health outreach, and community-led grassroots programs.',
   areaServed: 'Africa',
   email: 'hello@onetribeafrica.org',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: '14 Lenana Road, Kilimani',
-    addressLocality: 'Nairobi',
-    addressCountry: 'KE',
-  },
 };
 
 export default function RootLayout({
@@ -93,6 +88,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
         <div className="noise-overlay" aria-hidden="true" />
+        <SkipLink />
         <ScrollRestorer />
         {children}
       </body>

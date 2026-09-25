@@ -87,7 +87,7 @@ export default function ProgramsTeaserSection() {
             <h2 className="text-section font-extrabold text-primary-foreground">
               Apply for a
               <br />
-              <span className="font-serif italic text-accent font-normal">Programme.</span>
+              <span className="font-serif italic text-accent font-normal">Program.</span>
             </h2>
           </div>
           <p className="text-primary-foreground/60 max-w-sm text-base leading-relaxed font-serif">

@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
+import { usePathname } from 'next/navigation';
 import Link from '@/components/ui/SectionLink';
 import AppLogo from '@/components/ui/AppLogo';
 
@@ -43,6 +44,7 @@ const navItems: NavItem[] = [
 ];
 
 export default function Header() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -91,13 +93,16 @@ export default function Header() {
           <Link href="/" className="flex items-center gap-3 focus-ring rounded-lg" aria-label="OneTribe Africa Home">
             <AppLogo size={84} />
             <span className="font-sans font-800 text-primary-foreground text-xl tracking-tight hidden sm:block">
-              OneTribe<span className="text-accent">Africa</span>
+              OneTribe <span className="text-accent">Africa</span>
             </span>
           </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-1" ref={menuRef}>
-            {navItems.map((item) => (
+            {navItems.map((item) => {
+              const base = item.href.split('#')[0];
+              const isActive = base !== '/' && pathname.startsWith(base);
+              return (
               <div
                 key={item.label}
                 className="relative"
@@ -106,7 +111,12 @@ export default function Header() {
               >
                 <Link
                   href={item.href}
-                  className="px-4 py-2 rounded-lg text-primary-foreground/80 hover:text-primary-foreground text-sm font-semibold transition-colors focus-ring"
+                  aria-current={isActive ? 'page' : undefined}
+                  className={`px-4 py-2 rounded-lg text-sm font-semibold transition-colors focus-ring ${
+                    isActive
+                      ? 'text-primary-foreground underline decoration-accent decoration-2 underline-offset-8'
+                      : 'text-primary-foreground/80 hover:text-primary-foreground'
+                  }`}
                 >
                   {item.label}
                 </Link>
@@ -141,7 +151,8 @@ export default function Header() {
                   </div>
                 )}
               </div>
-            ))}
+              );
+            })}
           </nav>
 
           {/* CTA + Hamburger */}

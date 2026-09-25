@@ -10,7 +10,7 @@ import GetInvolvedCTA from './components/GetInvolvedCTA';
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-background">
+    <main id="main" tabIndex={-1} className="min-h-screen bg-background outline-none">
       <Header />
       <HeroSection />
       <StatTickerSection />

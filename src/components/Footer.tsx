@@ -13,7 +13,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-3 focus-ring rounded-lg">
               <AppLogo size={72} />
               <span className="font-sans font-bold text-primary text-xl tracking-tight">
-                OneTribe<span className="text-secondary">Africa</span>
+                OneTribe <span className="text-secondary">Africa</span>
               </span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed font-serif">
@@ -99,6 +99,18 @@ export default function Footer() {
                 ))}
               </div>
             </div>
+
+            <div className="space-y-4">
+              <p className="eyebrow text-muted-foreground">Contact</p>
+              <div className="space-y-3">
+                <a
+                  href="mailto:hello@onetribeafrica.org"
+                  className="block text-sm font-medium text-muted-foreground hover:text-foreground transition-colors focus-ring rounded"
+                >
+                  hello@onetribeafrica.org
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -108,12 +120,12 @@ export default function Footer() {
             © 2026 OneTribe Africa. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <button type="button" className="text-sm text-muted-foreground hover:text-foreground transition-colors focus-ring rounded">
+            <Link href="/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors focus-ring rounded">
               Privacy Policy
-            </button>
-            <button type="button" className="text-sm text-muted-foreground hover:text-foreground transition-colors focus-ring rounded">
-              Terms of Service
-            </button>
+            </Link>
+            <Link href="/terms" className="text-sm text-muted-foreground hover:text-foreground transition-colors focus-ring rounded">
+              Terms of Use
+            </Link>
           </div>
         </div>
       </div>

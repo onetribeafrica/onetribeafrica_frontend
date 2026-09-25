@@ -84,9 +84,9 @@
   }
 
   .text-hero {
-    font-size: clamp(3.5rem, 10vw, 8rem);
-    line-height: 0.88;
-    letter-spacing: -0.03em;
+    font-size: clamp(2.25rem, 4.6vw, 4.25rem);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
   }
 
   .text-display {

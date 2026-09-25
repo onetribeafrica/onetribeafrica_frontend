@@ -183,7 +183,7 @@ export default function HeroSection() {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-screen flex items-center overflow-hidden bg-primary"
+      className="relative min-h-[600px] md:min-h-[82vh] lg:max-h-[820px] flex items-center overflow-hidden bg-primary"
       aria-label="Hero section">
       
       {/* Background image carousel */}
@@ -231,7 +231,7 @@ export default function HeroSection() {
       
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full pt-32 pb-24">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full pt-32 pb-20">
         <div
           ref={contentRef}
           style={{ transition: 'transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94)' }}
@@ -239,7 +239,7 @@ export default function HeroSection() {
           
           {/* Eyebrow */}
           <div
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-dark mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-dark mb-5"
             style={{ animationDelay: '0.1s' }}>
             
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
@@ -247,7 +247,7 @@ export default function HeroSection() {
           </div>
 
           {/* Headline */}
-          <h1 className="text-hero font-extrabold text-primary-foreground max-w-3xl mb-6 leading-none">
+          <h1 className="text-hero font-extrabold text-primary-foreground max-w-4xl mb-4">
             {slide.headline[0]}
             <br />
             <span className="gradient-text-gold font-serif italic font-normal">
@@ -256,7 +256,7 @@ export default function HeroSection() {
           </h1>
 
           {/* Subhead */}
-          <p className="text-primary-foreground/75 text-lg md:text-xl max-w-xl mb-10 leading-relaxed font-serif text-left">
+          <p className="text-primary-foreground/80 text-base md:text-lg max-w-xl mb-7 leading-relaxed font-serif text-left">
             {slide.subhead}
           </p>
 
@@ -264,14 +264,14 @@ export default function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href={slide.ctaPrimary.href}
-              className="btn-primary px-8 py-4 rounded-full text-base font-bold inline-flex items-center gap-2 focus-ring">
+              className="btn-primary px-7 py-3.5 rounded-full text-base font-bold inline-flex items-center gap-2 focus-ring">
               
               {slide.ctaPrimary.label}
               <span aria-hidden="true">→</span>
             </Link>
             <Link
               href={slide.ctaSecondary.href}
-              className="btn-outline px-8 py-4 rounded-full text-base font-bold inline-flex items-center gap-2 focus-ring">
+              className="btn-outline px-7 py-3.5 rounded-full text-base font-bold inline-flex items-center gap-2 focus-ring">
               
               {slide.ctaSecondary.label}
             </Link>
@@ -279,7 +279,7 @@ export default function HeroSection() {
         </div>
 
         {/* Slide dots + controls */}
-        <div className="absolute bottom-10 left-6 right-6 flex items-center justify-between">
+        <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between">
           <div className="flex items-center gap-3" role="tablist" aria-label="Hero slides">
             {slides.map((s, i) =>
             <button
@@ -323,7 +323,7 @@ export default function HeroSection() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 pointer-events-none" aria-hidden="true">
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 pointer-events-none" aria-hidden="true">
         <span className="eyebrow text-primary-foreground/30">Scroll</span>
         <div className="w-px h-12 bg-primary-foreground/10 relative overflow-hidden">
           <div
