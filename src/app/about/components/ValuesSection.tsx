@@ -78,8 +78,7 @@ export default function ValuesSection() {
         <div className="text-center mb-16">
           <p className="eyebrow text-accent mb-3">What We Stand For</p>
           <h2 className="text-section font-extrabold text-foreground">
-            Our
-            <span className="font-serif italic text-secondary"> Values.</span>
+            Our Values.
           </h2>
         </div>
 

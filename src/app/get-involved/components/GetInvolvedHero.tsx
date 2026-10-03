@@ -29,8 +29,6 @@ export default function GetInvolvedHero() {
       <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/60 to-primary/20" />
       <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-primary/40" />
 
-      <div className="absolute top-1/3 right-1/3 w-80 h-80 blob-terracotta pointer-events-none" aria-hidden="true" />
-
       <div
         ref={contentRef}
         className="relative z-10 max-w-7xl mx-auto px-6 pb-20 pt-40 w-full"
@@ -42,9 +40,7 @@ export default function GetInvolvedHero() {
         
         <p className="eyebrow text-accent mb-4">Join the Movement</p>
         <h1 className="text-display font-extrabold text-primary-foreground max-w-3xl mb-6 leading-none">
-          Your Skills Can
-          <br />
-          <span className="font-serif italic text-accent font-normal">Change a Community.</span>
+          Your Skills Can Change a Community.
         </h1>
         <p className="text-primary-foreground/70 text-xl max-w-xl font-serif leading-relaxed">
           Volunteer on the ground. Fund the work that matters. Partner with us to scale impact. There is a place for you in OneTribe Africa.

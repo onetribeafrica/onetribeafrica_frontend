@@ -38,8 +38,7 @@ export default function AboutCTA() {
         >
           <p className="eyebrow text-accent mb-4">Ready to Help?</p>
           <h2 className="text-section font-extrabold text-foreground mb-6">
-            Be Part of the
-            <span className="font-serif italic text-secondary"> Tribe.</span>
+            Be Part of the Tribe.
           </h2>
           <p className="text-muted-foreground text-xl font-serif leading-relaxed mb-10 max-w-2xl mx-auto">
             Whether you want to volunteer in the field, fund a program, or partner with us institutionally, there is a place for you in OneTribe Africa.

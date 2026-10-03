@@ -1,5 +1,6 @@
 import { handleContact } from './contact';
 import { handleVolunteer } from './volunteer';
+import { handleNewsletter } from './newsletter';
 import type { EmailEnv } from './email';
 
 export interface Env extends EmailEnv {
@@ -16,6 +17,10 @@ export default {
 
     if (request.method === 'POST' && url.pathname === '/api/volunteer') {
       return handleVolunteer(request, env);
+    }
+
+    if (request.method === 'POST' && url.pathname === '/api/newsletter') {
+      return handleNewsletter(request, env);
     }
 
     return env.ASSETS.fetch(request);

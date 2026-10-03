@@ -2,11 +2,13 @@ import React from 'react';
 import Link from '@/components/ui/SectionLink';
 import AppLogo from '@/components/ui/AppLogo';
 import Icon from '@/components/ui/AppIcon';
+import NewsletterSignup from '@/components/NewsletterSignup';
 
 export default function Footer() {
   return (
-    <footer className="border-t border-border bg-background py-16 px-6">
-      <div className="max-w-7xl mx-auto">
+    <footer className="border-t border-border bg-background">
+      <NewsletterSignup />
+      <div className="max-w-7xl mx-auto py-16 px-6">
         <div className="flex flex-col lg:flex-row justify-between gap-10">
           {/* Left: Logo + tagline */}
           <div className="flex flex-col gap-4 max-w-xs">
@@ -48,6 +50,7 @@ export default function Footer() {
                   { label: 'Our Mission', href: '/about#mission' },
                   { label: 'Our Team', href: '/about#team' },
                   { label: 'Our Values', href: '/about#values' },
+                  { label: 'Careers', href: '/careers' },
                 ].map((l) => (
                   <Link
                     key={l.label}

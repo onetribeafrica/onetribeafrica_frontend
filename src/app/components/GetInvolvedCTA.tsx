@@ -34,9 +34,7 @@ export default function GetInvolvedCTA() {
         <div className="text-center mb-16">
           <p className="eyebrow text-accent mb-3">Join the Movement</p>
           <h2 className="text-section font-extrabold text-primary-foreground">
-            How Will You
-            <br />
-            <span className="font-serif italic text-accent font-normal">Get Involved?</span>
+            How Will You Get Involved?
           </h2>
         </div>
 

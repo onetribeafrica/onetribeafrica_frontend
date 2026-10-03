@@ -90,9 +90,7 @@ export default function ExploreGridSection() {
           <div>
             <p className="eyebrow text-accent mb-3">What We Do</p>
             <h2 className="text-section font-extrabold text-foreground">
-              Programs That
-              <br />
-              <span className="font-serif italic text-secondary font-normal">Move Communities.</span>
+              Programs That Move Communities.
             </h2>
           </div>
           <p className="text-muted-foreground max-w-sm text-base leading-relaxed">

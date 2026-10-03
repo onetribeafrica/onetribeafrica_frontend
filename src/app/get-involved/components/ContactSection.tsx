@@ -17,18 +17,6 @@ const contactCards: ContactCard[] = [
     value: 'hello@onetribeafrica.org',
     href: 'mailto:hello@onetribeafrica.org',
   },
-  {
-    icon: 'ChatBubbleLeftRightIcon',
-    label: 'WhatsApp',
-    value: '+254 700 123 456',
-    href: 'https://wa.me/254700123456',
-  },
-  {
-    icon: 'PhoneIcon',
-    label: 'Call Us',
-    value: '+254 20 123 4567',
-    href: 'tel:+254201234567',
-  },
 ];
 
 const inquiryReasons = [
@@ -103,8 +91,7 @@ export default function ContactSection() {
         <div className="text-center mb-16">
           <p className="eyebrow text-accent mb-3">Get In Touch</p>
           <h2 className="text-section font-extrabold text-foreground">
-            We Would Love to
-            <span className="font-serif italic text-secondary"> Hear From You.</span>
+            We Would Love to Hear From You.
           </h2>
         </div>
 
@@ -141,32 +128,6 @@ export default function ContactSection() {
                   <Icon name="ArrowRightIcon" size={16} className="text-muted-foreground ml-auto group-hover:text-accent transition-colors" />
                 </a>
               ))}
-            </div>
-
-            {/* Address */}
-            <div
-              className="contact-item p-6 rounded-2xl border border-border"
-              style={{
-                opacity: 0,
-                transform: 'translateY(20px)',
-                transition: 'opacity 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1)',
-              }}
-            >
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5"
-                  style={{ background: 'rgba(22,63,53,0.1)' }}>
-                  <Icon name="MapPinIcon" size={20} className="text-palm" />
-                </div>
-                <div>
-                  <p className="eyebrow text-muted-foreground mb-2">Our Office</p>
-                  <p className="font-bold text-foreground">OneTribe Africa</p>
-                  <p className="text-muted-foreground text-sm font-serif mt-1 leading-relaxed">
-                    14 Lenana Road, Kilimani<br />
-                    Nairobi, Kenya 00100<br />
-                    East Africa
-                  </p>
-                </div>
-              </div>
             </div>
 
             {/* Social links */}

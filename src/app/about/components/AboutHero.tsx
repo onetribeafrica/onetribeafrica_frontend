@@ -29,9 +29,6 @@ export default function AboutHero() {
       <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/60 to-primary/20" />
       <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-primary/40" />
 
-      {/* Blobs */}
-      <div className="absolute top-1/3 right-1/4 w-80 h-80 blob-gold pointer-events-none" aria-hidden="true" />
-
       <div
         ref={contentRef}
         className="relative z-10 max-w-7xl mx-auto px-6 pb-20 pt-40 w-full"
@@ -43,9 +40,7 @@ export default function AboutHero() {
         
         <p className="eyebrow text-accent mb-4">Our Story</p>
         <h1 className="text-display font-extrabold text-primary-foreground max-w-3xl mb-6 leading-none">
-          Built on the Belief That
-          <br />
-          <span className="font-serif italic text-accent font-normal">Communities Lead.</span>
+          Built on the Belief That Communities Lead.
         </h1>
         <p className="text-primary-foreground/70 text-xl max-w-2xl font-serif leading-relaxed">
           OneTribe Africa was founded in 2018 with one conviction: that lasting change happens when communities are treated as capable partners, not passive recipients. Every program we run is designed to hand ownership back to the people it serves.

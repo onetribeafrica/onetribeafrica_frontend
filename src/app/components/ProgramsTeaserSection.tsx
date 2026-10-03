@@ -85,9 +85,7 @@ export default function ProgramsTeaserSection() {
           <div>
             <p className="eyebrow text-accent mb-3">Active Programs</p>
             <h2 className="text-section font-extrabold text-primary-foreground">
-              Apply for a
-              <br />
-              <span className="font-serif italic text-accent font-normal">Program.</span>
+              Apply for a Program.
             </h2>
           </div>
           <p className="text-primary-foreground/60 max-w-sm text-base leading-relaxed font-serif">

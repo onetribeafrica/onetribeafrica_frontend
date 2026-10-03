@@ -54,113 +54,6 @@ export default function HeroSection() {
   const [loaded, setLoaded] = useState(false);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const heroRef = useRef<HTMLElement>(null);
-  const blobGoldRef = useRef<HTMLDivElement>(null);
-  const blobTerraRef = useRef<HTMLDivElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
-  const nodeCanvasRef = useRef<HTMLCanvasElement>(null);
-  const animFrameRef = useRef<number>(0);
-
-  // Node network animation
-  useEffect(() => {
-    const canvas = nodeCanvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-    const resize = () => {
-      canvas.width = canvas.offsetWidth;
-      canvas.height = canvas.offsetHeight;
-    };
-    resize();
-    window.addEventListener('resize', resize);
-
-    interface Node {
-      x: number;y: number;
-      vx: number;vy: number;
-      r: number;opacity: number;
-      pulseOffset: number;
-    }
-
-    const nodes: Node[] = Array.from({ length: 28 }, () => ({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      vx: (Math.random() - 0.5) * 0.35,
-      vy: (Math.random() - 0.5) * 0.35,
-      r: Math.random() * 3 + 1.5,
-      opacity: Math.random() * 0.5 + 0.3,
-      pulseOffset: Math.random() * Math.PI * 2
-    }));
-
-    let t = 0;
-    const draw = () => {
-      t += 0.012;
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      // Draw connections
-      for (let i = 0; i < nodes.length; i++) {
-        for (let j = i + 1; j < nodes.length; j++) {
-          const dx = nodes[i].x - nodes[j].x;
-          const dy = nodes[i].y - nodes[j].y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 140) {
-            const alpha = (1 - dist / 140) * 0.25;
-            ctx.beginPath();
-            ctx.moveTo(nodes[i].x, nodes[i].y);
-            ctx.lineTo(nodes[j].x, nodes[j].y);
-            ctx.strokeStyle = `rgba(222, 74, 30, ${alpha})`;
-            ctx.lineWidth = 1;
-            ctx.stroke();
-          }
-        }
-      }
-
-      // Draw nodes
-      nodes.forEach((node) => {
-        const pulse = Math.sin(t + node.pulseOffset) * 0.3 + 0.7;
-        ctx.beginPath();
-        ctx.arc(node.x, node.y, node.r * pulse, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(222, 74, 30, ${node.opacity * pulse})`;
-        ctx.fill();
-
-        // Move
-        node.x += node.vx;
-        node.y += node.vy;
-        if (node.x < 0 || node.x > canvas.width) node.vx *= -1;
-        if (node.y < 0 || node.y > canvas.height) node.vy *= -1;
-      });
-
-      animFrameRef.current = requestAnimationFrame(draw);
-    };
-    draw();
-
-    return () => {
-      cancelAnimationFrame(animFrameRef.current);
-      window.removeEventListener('resize', resize);
-    };
-  }, []);
-
-  // Cursor parallax
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      const cx = window.innerWidth / 2;
-      const cy = window.innerHeight / 2;
-      const mx = (e.clientX - cx) / cx;
-      const my = (e.clientY - cy) / cy;
-
-      if (blobGoldRef.current) {
-        blobGoldRef.current.style.transform = `translate(${mx * 40}px, ${my * 30}px)`;
-      }
-      if (blobTerraRef.current) {
-        blobTerraRef.current.style.transform = `translate(${mx * -25}px, ${my * -20}px)`;
-      }
-      if (contentRef.current) {
-        contentRef.current.style.transform = `perspective(1200px) rotateY(${mx * 2}deg) rotateX(${-my * 2}deg)`;
-      }
-    };
-
-    window.addEventListener('mousemove', handleMouseMove, { passive: true });
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
 
   // Auto advance
   const next = useCallback(() => {
@@ -208,34 +101,9 @@ export default function HeroSection() {
         </div>
       )}
 
-      {/* Atmospheric blobs */}
-      <div
-        ref={blobGoldRef}
-        className="absolute top-1/4 right-1/4 w-96 h-96 blob-gold pointer-events-none"
-        style={{ transition: 'transform 0.8s cubic-bezier(0.25,0.46,0.45,0.94)' }}
-        aria-hidden="true" />
-      
-      <div
-        ref={blobTerraRef}
-        className="absolute bottom-1/3 left-1/3 w-80 h-80 blob-terracotta pointer-events-none"
-        style={{ transition: 'transform 0.8s cubic-bezier(0.25,0.46,0.45,0.94)' }}
-        aria-hidden="true" />
-      
-
-      {/* Node network canvas */}
-      <canvas
-        ref={nodeCanvasRef}
-        className="absolute inset-0 w-full h-full pointer-events-none"
-        style={{ opacity: 0.6, mixBlendMode: 'screen' }}
-        aria-hidden="true" />
-      
-
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 w-full pt-32 pb-20">
-        <div
-          ref={contentRef}
-          style={{ transition: 'transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94)' }}
-          className={`transition-opacity duration-700 ${loaded ? 'opacity-100' : 'opacity-0'}`}>
+        <div className={`transition-opacity duration-700 ${loaded ? 'opacity-100' : 'opacity-0'}`}>
           
           {/* Eyebrow */}
           <div

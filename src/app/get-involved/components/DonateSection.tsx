@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
+import Link from '@/components/ui/SectionLink';
 
 
 interface DonationTier {
@@ -89,11 +90,10 @@ export default function DonateSection() {
         <div className="text-center mb-16">
           <p className="eyebrow text-accent mb-3">Fund the Work</p>
           <h2 className="text-section font-extrabold text-primary-foreground">
-            Partner
-            <span className="font-serif italic text-accent"> With Us.</span>
+            Partner With Us.
           </h2>
           <p className="text-primary-foreground/60 text-lg font-serif mt-4 max-w-xl mx-auto">
-            100% of donations go directly to programs. No overhead deductions. Audited annually.
+            Every tier below funds a specific part of our work in the field.
           </p>
         </div>
 
@@ -173,11 +173,14 @@ export default function DonateSection() {
             transition: 'opacity 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1)',
           }}
         >
-          <button className="btn-primary w-full py-5 rounded-full text-lg font-bold focus-ring mb-4">
-            Donate {tiers[selected]?.amount}{mode === 'monthly' ? '/month' : ' Now'}
-          </button>
+          <Link
+            href="/get-involved#contact"
+            className="btn-primary w-full py-5 rounded-full text-lg font-bold focus-ring mb-4 inline-flex items-center justify-center"
+          >
+            Get in Touch to Give {tiers[selected]?.amount}
+          </Link>
           <p className="text-primary-foreground/40 text-xs font-mono">
-            Secure payment · SSL encrypted · Tax receipt provided
+            Online giving is launching soon · Reach us directly for now
           </p>
         </div>
       </div>

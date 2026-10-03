@@ -92,8 +92,7 @@ export default function TeamSection() {
         <div className="text-center mb-16">
           <p className="eyebrow text-accent mb-3">The People Behind the Work</p>
           <h2 className="text-section font-extrabold text-primary-foreground">
-            Our
-            <span className="font-serif italic text-accent"> Team.</span>
+            Our Team.
           </h2>
         </div>
 

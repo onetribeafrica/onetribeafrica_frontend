@@ -93,9 +93,7 @@ export default function VolunteerSection() {
           <div>
             <p className="eyebrow text-accent mb-3">For Individuals</p>
             <h2 className="text-section font-extrabold text-foreground">
-              Volunteer &
-              <br />
-              <span className="font-serif italic text-palm font-normal">Join Field Teams.</span>
+              Volunteer &amp; Join Field Teams.
             </h2>
           </div>
           <p className="text-muted-foreground max-w-sm font-serif leading-relaxed">
