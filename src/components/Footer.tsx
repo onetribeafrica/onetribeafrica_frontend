@@ -1,8 +1,8 @@
-import React from 'react';
-import Link from '@/components/ui/SectionLink';
-import AppLogo from '@/components/ui/AppLogo';
-import Icon from '@/components/ui/AppIcon';
-import NewsletterSignup from '@/components/NewsletterSignup';
+import React from "react";
+import Link from "@/components/ui/SectionLink";
+import AppLogo from "@/components/ui/AppLogo";
+import Icon from "@/components/ui/AppIcon";
+import NewsletterSignup from "@/components/NewsletterSignup";
 
 export default function Footer() {
   return (
@@ -12,21 +12,25 @@ export default function Footer() {
         <div className="flex flex-col lg:flex-row justify-between gap-10">
           {/* Left: Logo + tagline */}
           <div className="flex flex-col gap-4 max-w-xs">
-            <Link href="/" className="flex items-center gap-3 focus-ring rounded-lg">
+            <Link
+              href="/"
+              className="flex items-center gap-3 focus-ring rounded-lg"
+            >
               <AppLogo size={72} />
               <span className="font-sans font-bold text-primary text-xl tracking-tight">
                 OneTribe <span className="text-secondary">Africa</span>
               </span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed font-serif">
-              Uniting communities, elevating lives, and building a stronger Africa together.
+              Uniting communities, elevating lives, and building a stronger
+              Africa together.
             </p>
             <div className="flex items-center gap-3 pt-1">
               {[
-                { icon: 'GlobeAltIcon', label: 'Facebook' },
-                { icon: 'PhotoIcon', label: 'Instagram' },
-                { icon: 'BriefcaseIcon', label: 'LinkedIn' },
-                { icon: 'ChatBubbleLeftRightIcon', label: 'X' },
+                { icon: "GlobeAltIcon", label: "Facebook" },
+                { icon: "PhotoIcon", label: "Instagram" },
+                { icon: "BriefcaseIcon", label: "LinkedIn" },
+                { icon: "ChatBubbleLeftRightIcon", label: "X" },
               ].map((s) => (
                 <button
                   key={s.label}
@@ -34,7 +38,10 @@ export default function Footer() {
                   aria-label={s.label}
                   className="w-9 h-9 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors focus-ring"
                 >
-                  <Icon name={s.icon as Parameters<typeof Icon>[0]['name']} size={16} />
+                  <Icon
+                    name={s.icon as Parameters<typeof Icon>[0]["name"]}
+                    size={16}
+                  />
                 </button>
               ))}
             </div>
@@ -46,11 +53,10 @@ export default function Footer() {
               <p className="eyebrow text-muted-foreground">Organization</p>
               <div className="space-y-3">
                 {[
-                  { label: 'About Us', href: '/about' },
-                  { label: 'Our Mission', href: '/about#mission' },
-                  { label: 'Our Team', href: '/about#team' },
-                  { label: 'Our Values', href: '/about#values' },
-                  { label: 'Careers', href: '/careers' },
+                  { label: "About Us", href: "/about" },
+                  { label: "Our Mission", href: "/about#mission" },
+                  { label: "Our Values", href: "/about#values" },
+                  { label: "Careers", href: "/careers" },
                 ].map((l) => (
                   <Link
                     key={l.label}
@@ -67,10 +73,10 @@ export default function Footer() {
               <p className="eyebrow text-muted-foreground">Programs</p>
               <div className="space-y-3">
                 {[
-                  { label: 'What We Do', href: '/#programs' },
-                  { label: 'Apply for Programs', href: '/#projects' },
-                  { label: 'Current Projects', href: '/#projects' },
-                  { label: 'Our Impact', href: '/#impact' },
+                  { label: "What We Do", href: "/what-we-do" },
+                  { label: "Apply for Programs", href: "/what-we-do#projects" },
+                  { label: "Current Projects", href: "/what-we-do#projects" },
+                  { label: "Our Impact", href: "/what-we-do#impact" },
                 ].map((l) => (
                   <Link
                     key={l.label}
@@ -87,10 +93,10 @@ export default function Footer() {
               <p className="eyebrow text-muted-foreground">Get Involved</p>
               <div className="space-y-3">
                 {[
-                  { label: 'Volunteer', href: '/get-involved#volunteer' },
-                  { label: 'Donate', href: '/get-involved#donate' },
-                  { label: 'Partner With Us', href: '/get-involved#contact' },
-                  { label: 'Contact Us', href: '/get-involved#contact' },
+                  { label: "Volunteer", href: "/get-involved#volunteer" },
+                  { label: "Donate", href: "/get-involved#donate" },
+                  { label: "Partner With Us", href: "/get-involved#contact" },
+                  { label: "Contact Us", href: "/get-involved#contact" },
                 ].map((l) => (
                   <Link
                     key={l.label}
@@ -123,10 +129,16 @@ export default function Footer() {
             © 2026 OneTribe Africa. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <Link href="/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors focus-ring rounded">
+            <Link
+              href="/privacy"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors focus-ring rounded"
+            >
               Privacy Policy
             </Link>
-            <Link href="/terms" className="text-sm text-muted-foreground hover:text-foreground transition-colors focus-ring rounded">
+            <Link
+              href="/terms"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors focus-ring rounded"
+            >
               Terms of Use
             </Link>
           </div>
